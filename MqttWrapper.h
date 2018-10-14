@@ -14,13 +14,14 @@ class MqttWrapper {
   PubSubClient* _client;
   public:
     MqttWrapper();
-    MqttWrapper( char*, char*, char*, char*, uint16_t, PubSubClient& client);
+    MqttWrapper(char*, char*, char*, char*, uint16_t, PubSubClient& client);
     void setup();
     void setCallback(void (*callback)(char*, uint8_t*, unsigned int));
     void setTopics(char*, char*);
     void connect();
     void loop();
     void publish(char*);
+    void publish(char*, char*);
 };
 
 #endif

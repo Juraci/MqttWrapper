@@ -64,3 +64,7 @@ void MqttWrapper::loop() {
 void MqttWrapper::publish(char* message) {
   _client->publish(outTopic, message);
 }
+
+void MqttWrapper::publish(char* message, char* _outTopic) {
+  _client->publish(_outTopic, message);
+}
